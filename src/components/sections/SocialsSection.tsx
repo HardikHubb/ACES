@@ -7,14 +7,15 @@ import { Mail, ExternalLink } from 'lucide-react';
 
 export const SocialsSection: React.FC = () => {
   return (
-    <section id="connect" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
+    <section id="connect" className="relative section-spacing page-container z-10">
       <SectionHeader
         tag="// 04 — NETWORK"
         title="CONNECT WITH ACES"
         subtitle="Reach out, join the conversation, or partner with our engineering community."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Card gap 24-32px */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 lg:gap-8">
         {SOCIAL_LINKS.map((item) => {
           const isInstagram = item.id === 'instagram';
           const isLinkedin = item.id === 'linkedin';
@@ -35,32 +36,32 @@ export const SocialsSection: React.FC = () => {
             >
               <GlassCard
                 glowColor={isInstagram ? 'cyan' : isLinkedin ? 'violet' : 'cyan'}
-                className="h-full flex flex-col justify-between p-8"
+                className="h-full flex flex-col justify-between p-7 sm:p-8"
               >
                 <div>
-                  {/* Card Header & Icon */}
+                  {/* Card Header & Icon — moderate size */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#080d18] border border-[#00e5ff]/30 flex items-center justify-center group-hover:border-[#00e5ff] transition-colors shadow-[0_0_15px_rgba(0,229,255,0.15)]">
-                      <IconComponent className="w-6 h-6 text-[#00e5ff] group-hover:scale-110 transition-transform" />
+                    <div className="w-10 h-10 rounded-xl bg-[#080d18] border border-[#00e5ff]/25 flex items-center justify-center group-hover:border-[#00e5ff]/50 transition-colors">
+                      <IconComponent className="w-5 h-5 text-[#00e5ff] group-hover:scale-105 transition-transform" />
                     </div>
-                    <ExternalLink className="w-5 h-5 text-[#64748b] group-hover:text-[#00e5ff] transition-colors" />
+                    <ExternalLink className="w-4 h-4 text-[#64748b] group-hover:text-[#00e5ff] transition-colors" />
                   </div>
 
-                  {/* Title & Handle */}
-                  <div className="font-mono text-xs text-[#00e5ff] tracking-widest uppercase mb-1 font-bold">
+                  {/* Title & Handle — smaller typography */}
+                  <div className="font-mono text-[0.7rem] text-[#00e5ff] tracking-widest uppercase mb-2 font-semibold">
                     {item.title}
                   </div>
-                  <h3 className="text-xl font-heading font-extrabold text-white mb-3 group-hover:text-[#00e5ff] transition-colors">
+                  <h3 className="text-base sm:text-lg font-heading font-bold text-white mb-3 group-hover:text-[#00e5ff] transition-colors">
                     {item.handle}
                   </h3>
 
-                  <p className="text-xs text-[#94a3b8] leading-relaxed font-body">
+                  <p className="text-[0.8rem] text-[#94a3b8] leading-[1.65] font-body">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Footer Link Label */}
-                <div className="mt-8 pt-4 border-t border-[#00e5ff]/10 font-mono text-xs text-[#00e5ff] flex items-center justify-between">
+                <div className="mt-7 pt-4 border-t border-[#00e5ff]/10 font-mono text-[0.7rem] text-[#00e5ff] flex items-center justify-between">
                   <span>OPEN LINK</span>
                   <span>→</span>
                 </div>

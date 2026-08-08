@@ -21,7 +21,7 @@ export const EventsSection: React.FC = () => {
             <GlassCard
               key={event.id}
               glowColor={isFeatured ? 'cyan' : 'violet'}
-              className={`flex flex-col justify-between p-8 sm:p-9 ${
+              className={`flex flex-col justify-between ${
                 isFeatured ? 'md:col-span-2 lg:col-span-2 border-[#00e5ff]/30 bg-[#080d18]/60' : ''
               }`}
             >
@@ -40,7 +40,7 @@ export const EventsSection: React.FC = () => {
                 </div>
 
                 {/* Event Title */}
-                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors">
+                <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors">
                   {event.title}
                 </h3>
 

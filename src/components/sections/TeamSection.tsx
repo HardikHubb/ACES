@@ -39,11 +39,11 @@ export const TeamSection: React.FC = () => {
             <GlassCard
               key={member.id}
               glowColor={isVioletGlow ? 'violet' : 'cyan'}
-              className="flex flex-col justify-between min-h-[330px] group p-7 sm:p-8"
+              className="flex flex-col justify-between min-h-[280px] group"
             >
               <div>
                 {/* Header Number & Role Icon */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-5">
                   <span className="font-mono text-xs text-[#00e5ff]/80 tracking-widest px-2 py-0.5 rounded bg-[#00e5ff]/8 border border-[#00e5ff]/15">
                     {member.number}
                   </span>
