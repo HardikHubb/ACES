@@ -43,7 +43,7 @@ export const RegistrationSection: React.FC = () => {
           {/* CTA Button */}
           <div className="flex flex-col items-center gap-3 pt-8">
             <PortalButton
-              text="REGISTER NOW →"
+              text="REGISTER NOW"
               href='https://docs.google.com/forms/d/e/1FAIpQLSf1SKO8cTnSBCwFl3FsuSIiPJBMPuk6GAaZlydnOFkSjUcPTQ/viewform?usp=header'
             />
 

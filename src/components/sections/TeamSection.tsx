@@ -2,23 +2,7 @@ import React from 'react';
 import { TEAM_MEMBERS } from '../../config/acesConfig';
 import { SectionHeader } from '../ui/SectionHeader';
 import { GlassCard } from '../ui/GlassCard';
-import { Shield, Code, Palette, Trophy, Heart, Award, Users, Megaphone, DollarSign, FileText, Compass, Eye, CheckCircle } from 'lucide-react';
 
-const ROLE_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
-  '01': Shield,
-  '02': Users,
-  '03': FileText,
-  '04': DollarSign,
-  '05': Megaphone,
-  '06': Code,
-  '07': Palette,
-  '08': Compass,
-  '09': Eye,
-  '10': CheckCircle,
-  '11': Trophy,
-  '12': Heart,
-  '13': Award,
-};
 
 export const TeamSection: React.FC = () => {
   return (
@@ -31,7 +15,6 @@ export const TeamSection: React.FC = () => {
       {/* Grid Gap 24px - 32px */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-8">
         {TEAM_MEMBERS.map((member, index) => {
-          const IconComponent = ROLE_ICONS[member.number] || Shield;
           const isVioletGlow = index % 3 === 1;
 
           return (
