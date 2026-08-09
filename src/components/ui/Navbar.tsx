@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ACES_INFO } from '../../config/acesConfig';
-import { Menu, X, Cpu, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import acesLogo from '../../assets/aces-logo.png';
 
 interface NavbarProps {

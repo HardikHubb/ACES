@@ -2,7 +2,7 @@ import React from 'react';
 import { EVENTS } from '../../config/acesConfig';
 import { SectionHeader } from '../ui/SectionHeader';
 import { GlassCard } from '../ui/GlassCard';
-import { Sparkles, Code, Flame, Zap } from 'lucide-react';
+import { Code, Flame, } from 'lucide-react';
 
 export const EventsSection: React.FC = () => {
   return (

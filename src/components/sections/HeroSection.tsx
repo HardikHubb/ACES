@@ -1,6 +1,6 @@
 import React from 'react';
-import { ACES_INFO, ACES_PLACEHOLDERS } from '../../config/acesConfig';
-import { ChevronDown, Terminal } from 'lucide-react';
+import { ACES_INFO} from '../../config/acesConfig';
+import { ChevronDown} from 'lucide-react';
 import acesLogo from '../../assets/aces-logo.png';
 
 

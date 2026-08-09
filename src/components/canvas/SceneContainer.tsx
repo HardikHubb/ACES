@@ -1,10 +1,6 @@
 import React from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { ParticleField } from './ParticleField';
-import { CyberGrid } from './CyberGrid';
-import { HeroLogo3D } from './HeroLogo3D';
-import { AboutNetwork3D } from './AboutNetwork3D';
-import { TechtonicVisual3D } from './TechtonicVisual3D';
 import * as THREE from 'three';
 
 interface SceneContainerProps {
@@ -54,7 +50,7 @@ const CameraRig: React.FC<{
   return null;
 };
 
-export const SceneContainer: React.FC = ({
+export const SceneContainer: React.FC<SceneContainerProps> = ({
   activeSection,
   mousePos,
   isMobile,
@@ -81,6 +77,11 @@ export const SceneContainer: React.FC = ({
     mousePos={mousePos}
     count={200}
   />
+  <CameraRig
+  activeSection={activeSection}
+  mousePos={mousePos}
+  isMobile={isMobile}
+/>
 </Canvas>
     </div>
   );

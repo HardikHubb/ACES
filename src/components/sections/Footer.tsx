@@ -1,6 +1,5 @@
 import React from 'react';
 import { ACES_INFO } from '../../config/acesConfig';
-import { Cpu } from 'lucide-react';
 import acesLogo from '../../assets/aces-logo.png';
 
 

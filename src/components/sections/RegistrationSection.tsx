@@ -1,5 +1,5 @@
 import React from 'react';
-import { ACES_INFO, ACES_PLACEHOLDERS } from '../../config/acesConfig';
+import { ACES_INFO } from '../../config/acesConfig';
 import { PortalButton } from '../ui/PortalButton';
 import { Calendar, Sparkles } from 'lucide-react';
 
