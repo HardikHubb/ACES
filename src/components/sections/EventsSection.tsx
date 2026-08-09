@@ -10,7 +10,6 @@ export const EventsSection: React.FC = () => {
       <SectionHeader
         tag="// 03 — EXPERIENCES"
         title="EVENTS"
-        subtitle="Experiences that bring ACES to life."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -18,76 +17,81 @@ export const EventsSection: React.FC = () => {
           const isFeatured = event.isFeatured;
 
           return (
-            <GlassCard
-              key={event.id}
-              glowColor={isFeatured ? 'cyan' : 'violet'}
-              className={`flex flex-col justify-between ${
-                isFeatured ? 'md:col-span-2 lg:col-span-2 border-[#00e5ff]/30 bg-[#080d18]/60' : ''
-              }`}
-            >
-              <div>
-                {/* Event Header & Number */}
-                <div className="flex items-center justify-between mb-5">
-                  <span className="font-mono text-xs text-[#00e5ff] tracking-widest px-2.5 py-1 rounded bg-[#00e5ff]/10 border border-[#00e5ff]/20">
-                    {event.number}
-                  </span>
-                  {isFeatured && (
-                    <span className="badge-tag bg-[#7c3aed]/15 text-[#a855f7] border-[#7c3aed]/30">
-                      <Zap className="w-3.5 h-3.5 text-[#00e5ff]" />
-                      DEPARTMENT SHOWDOWN
-                    </span>
-                  )}
-                </div>
+<GlassCard
+  key={event.id}
+  glowColor={isFeatured ? 'cyan' : 'violet'}
+  className={`flex flex-col ${
+    isFeatured
+      ? 'md:col-span-2 lg:col-span-2 border-[#00e5ff]/30 bg-[#080d18]/60'
+      : ''
+  } !px-8 !py-8 sm:!px-10 sm:!py-10 md:!px-12 md:!py-10`}
+>
+  {/* Event Header */}
+  <div className="flex flex-col gap-5">
+    <div className="mb-5">
+      <span className="inline-block font-mono text-xs text-[#00e5ff] tracking-widest px-3 py-1.5 rounded-md bg-[#00e5ff]/10 border border-[#00e5ff]/20">
+        {event.number}
+      </span>
+    </div>
 
-                {/* Event Title */}
-                <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors">
-                  {event.title}
-                </h3>
+    <h3 className="text-xl sm:text-2xl font-heading font-bold text-white leading-tight mb-3">
+      {event.title}
+    </h3>
 
-                {/* Event Tagline */}
-                <div className="font-mono text-xs sm:text-sm text-[#00e5ff] mb-4 font-medium">
-                  {event.tagline}
-                </div>
+    <div className="font-mono text-xs sm:text-sm text-[#00e5ff] font-medium leading-relaxed mb-4">
+      {event.tagline}
+    </div>
 
-                {/* Event Description */}
-                <p className="text-xs sm:text-sm text-[#94a3b8] font-normal leading-[1.7] mb-6 max-w-xl">
-                  {event.description}
-                </p>
+    <p className="text-xs sm:text-sm text-[#94a3b8] leading-[1.75] max-w-xl">
+      {event.description}
+    </p>
+  </div>
 
-                {/* Techtonic Sub-events breakdown with spacious layout */}
-                {event.subEvents && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6 pt-6 border-t border-white/10">
-                    {event.subEvents.map((sub, idx) => (
-                      <div
-                        key={idx}
-                        className="p-4 rounded-xl bg-[#03050a]/70 border border-white/5 hover:border-[#00e5ff]/30 transition-colors space-y-2"
-                      >
-                        <div className="flex items-center gap-2 font-mono text-xs font-semibold text-[#00e5ff]">
-                          {sub.title === 'BOX CRICKET' ? (
-                            <Flame className="w-4 h-4 text-[#7c3aed]" />
-                          ) : (
-                            <Code className="w-4 h-4 text-[#00e5ff]" />
-                          )}
-                          <span>{sub.title}</span>
-                        </div>
-                        <p className="text-xs text-[#94a3b8] font-normal leading-relaxed">
-                          {sub.description}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+  {/* Sub Events */}
+  {event.subEvents && (
+    <div className="mt-8 pt-7 border-t border-white/10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {event.subEvents.map((sub, idx) => (
+          <div
+            key={idx}
+            className="
+              rounded-2xl
+              bg-[#03050a]/80
+              border border-white/10
+              px-6 py-6
+              sm:px-7 sm:py-7
+              min-h-[150px]
+              flex flex-col
+              justify-start
+              transition-all duration-300
+              hover:border-[#00e5ff]/30
+            "
+          >
+            {/* Sub-event heading */}
+            <div className="flex items-center gap-3 mb-5">
+              <div className="flex-shrink-0">
+                {sub.title === 'BOX CRICKET' ? (
+                  <Flame className="w-5 h-5 text-[#7c3aed]" />
+                ) : (
+                  <Code className="w-5 h-5 text-[#00e5ff]" />
                 )}
               </div>
 
-              {/* Card Footer Indicator */}
-              <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-[#64748b]">
-                <span className="flex items-center gap-1.5 text-[#00e5ff]/70">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  DEPARTMENT OF COMPUTER ENGINEERING
-                </span>
-                <span className="text-[#a855f7]">ACES_2026</span>
-              </div>
-            </GlassCard>
+              <span className="font-mono text-xs sm:text-sm font-semibold tracking-wider text-[#00e5ff] mt-5">
+                {sub.title}
+              </span>
+            </div>
+
+            {/* Sub-event description */}
+            <p className="text-xs sm:text-sm text-[#94a3b8] leading-[1.8]">
+              {sub.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+</GlassCard>
           );
         })}
       </div>

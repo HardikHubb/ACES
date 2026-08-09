@@ -47,7 +47,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
         transition: 'transform 0.22s ease-out, border-color 0.3s ease, box-shadow 0.3s ease',
         transformStyle: 'preserve-3d',
       }}
-      className={`relative rounded-2xl overflow-hidden glass-panel p-6 sm:p-7 md:p-8 border ${
+      className={`relative rounded-2xl overflow-hidden glass-panel p-10 sm:p-12 md:p-14 border ${
         isViolet
           ? 'border-[#7c3aed]/15 hover:border-[#7c3aed]/45 hover:shadow-[0_12px_32px_rgba(124,58,237,0.15)]'
           : 'border-[#00e5ff]/12 hover:border-[#00e5ff]/45 hover:shadow-[0_12px_32px_rgba(0,229,255,0.15)]'

@@ -1,6 +1,8 @@
 import React from 'react';
 import { ACES_INFO, ACES_PLACEHOLDERS } from '../../config/acesConfig';
 import { ChevronDown, Terminal } from 'lucide-react';
+import acesLogo from '../../assets/aces-logo.png';
+
 
 export const HeroSection: React.FC = () => {
   return (
@@ -10,20 +12,22 @@ export const HeroSection: React.FC = () => {
     >
       {/* Top Department Badge */}
       <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#080d18]/80 border border-[#00e5ff]/20 text-[11px] font-mono text-[#00e5ff] backdrop-blur-md shadow-sm">
-        <Terminal className="w-3.5 h-3.5" />
-        <span>{ACES_INFO.department.toUpperCase()}</span>
       </div>
 
       {/* Main Hero Typography Stack — Controlled Typography Hierarchy */}
-      <div className="my-auto max-w-[850px] mx-auto space-y-6 sm:space-y-7">
-        {/* Logo Placeholder Marker */}
-        <div className="text-[10px] font-mono text-[#94a3b8]/60 tracking-[0.2em] uppercase mb-2">
-          {ACES_PLACEHOLDERS.LOGO}
-        </div>
+      <div className="my-auto max-w-[850px] mx-auto space-y-3 sm:space-y-4">
+        {/* ACES Logo */}
+<div className="flex justify-center -mb-4">
+  <img
+    src={acesLogo}
+    alt="ACES Logo"
+    className="w-70 h-70 sm:w-78 sm:h-78 object-contain"
+  />
+</div>
 
         {/* ACES Controlled Heading scale clamp(3rem, 6vw, 5.5rem) */}
         <h1 className="text-[clamp(2.8rem,6vw,5.5rem)] font-heading font-extrabold tracking-tight text-white leading-tight glow-cyan">
-          <span className="bg-gradient-to-r from-white via-[#00e5ff] to-[#2563eb] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white via-[#00e5ff] to-[#2563eb] bg-clip-text text-transparent ">
             {ACES_INFO.shortName}
           </span>
         </h1>

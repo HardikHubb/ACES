@@ -54,42 +54,35 @@ const CameraRig: React.FC<{
   return null;
 };
 
-export const SceneContainer: React.FC<SceneContainerProps> = ({
+export const SceneContainer: React.FC = ({
   activeSection,
   mousePos,
   isMobile,
 }) => {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
-      <Canvas
-        camera={{ position: [0, 0, 6.2], fov: 60 }}
-        dpr={isMobile ? [1, 1.2] : [1, 1.5]}
-        gl={{ powerPreference: 'high-performance', antialias: true }}
-      >
-        <ambientLight intensity={0.3} />
-        <directionalLight position={[5, 8, 5]} intensity={0.9} color="#00e5ff" />
-        <directionalLight position={[-5, -5, -2]} intensity={0.6} color="#7c3aed" />
+    <div
+      className="fixed inset-0 w-full h-full"
+      style={{
+        zIndex: 0,
+        pointerEvents: 'none',
+      }}
+    >
+     <Canvas
+  camera={{ position: [0, 0, 6.2], fov: 60 }}
+  dpr={isMobile ? [1, 1.2] : [1, 1.5]}
+  gl={{
+    powerPreference: 'high-performance',
+    antialias: true,
+  }}
+>
 
-        <ParticleField mousePos={mousePos} count={isMobile ? 85 : 200} />
-
-        <CyberGrid />
-
-        {activeSection === 'hero' && <HeroLogo3D mousePos={mousePos} />}
-
-        {(activeSection === 'about' || activeSection === 'hero') && (
-          <group position={isMobile ? [0, 2.5, -2] : [-3.8, 0, 0]}>
-            <AboutNetwork3D mousePos={mousePos} />
-          </group>
-        )}
-
-        {activeSection === 'events' && (
-          <group position={isMobile ? [0, 3, -2] : [4.0, 0, 0]}>
-            <TechtonicVisual3D />
-          </group>
-        )}
-
-        <CameraRig activeSection={activeSection} mousePos={mousePos} isMobile={isMobile} />
-      </Canvas>
+  {/* PARTICLES */}
+  <ParticleField
+    mousePos={mousePos}
+    count={200}
+  />
+</Canvas>
     </div>
   );
 };
+

@@ -1,43 +1,50 @@
 import React from 'react';
 import { ACES_INFO } from '../../config/acesConfig';
 import { Cpu } from 'lucide-react';
+import acesLogo from '../../assets/aces-logo.png';
+
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 border-t border-[#00e5ff]/20 bg-[#03050a] z-10">
-      <div className="max-w-7xl mx-auto flex flex-col items-center text-center space-y-6">
-        {/* ACES Emblem & Header */}
+    <footer className="relative z-10 border-t border-white/5 bg-[#03050a]">
+      <div className="page-container py-16 sm:py-20 flex flex-col items-center text-center gap-6">
+        {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-[#00e5ff]/10 border border-[#00e5ff]/40 flex items-center justify-center shadow-[0_0_15px_rgba(0,229,255,0.25)]">
-            <Cpu className="w-5 h-5 text-[#00e5ff]" />
+          
+              <div className="w-14 h-14 flex items-center justify-center">
+    <img
+      src={acesLogo}
+      alt="ACES Logo"
+      className="w-full h-full object-contain"
+    />
+  
           </div>
           <div className="text-left">
-            <h3 className="font-heading font-black text-2xl tracking-wider text-white">
+            <div className="font-heading font-semibold text-lg tracking-widest text-white">
               {ACES_INFO.shortName}
-            </h3>
-            <div className="text-xs font-mono text-[#94a3b8]">
+            </div>
+            <div className="text-[10px] font-mono text-[#64748b]">
               {ACES_INFO.fullName}
             </div>
           </div>
         </div>
 
-        {/* Department Info */}
-        <div className="font-mono text-xs text-[#00e5ff] tracking-widest uppercase">
+        {/* Department */}
+        <div className="font-mono text-[10px] text-[#00e5ff]/60 tracking-[0.2em] uppercase">
           {ACES_INFO.department}
         </div>
 
         {/* Tagline */}
-        <div className="font-mono text-sm tracking-[0.25em] text-[#a855f7] font-bold">
+        <div className="font-mono text-xs tracking-[0.3em] text-[#64748b] font-medium">
           {ACES_INFO.tagline}
         </div>
 
-        {/* Thin Animated Cyan Line */}
-        <div className="w-full max-w-md h-[1px] bg-gradient-to-r from-transparent via-[#00e5ff] to-transparent my-4 shadow-[0_0_8px_#00e5ff]" />
+        {/* Thin cyan divider */}
+        <div className="w-48 h-[1px] bg-gradient-to-r from-transparent via-[#00e5ff]/40 to-transparent" />
 
-        {/* Bottom Credits */}
-        <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-4xl text-xs font-mono text-[#64748b] gap-2 pt-2">
-          <div>© {ACES_INFO.copyrightYear} {ACES_INFO.shortName}. All rights reserved.</div>
-          <div className="text-[#00e5ff]/70">{ACES_INFO.technicalTeamCredit}</div>
+        {/* Copyright row */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-[10px] font-mono text-[#64748b]/60 pt-1">
+          <span>© {ACES_INFO.copyrightYear} {ACES_INFO.shortName}. All rights reserved.</span>
         </div>
       </div>
     </footer>
