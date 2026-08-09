@@ -19,9 +19,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   const navLinks = [
     { label: 'ABOUT', href: '#about' },
+    { label: 'REGISTER', href: '#registration' },
     { label: 'TEAM', href: '#team' },
     { label: 'EVENTS', href: '#events' },
-    { label: 'REGISTER', href: '#registration' },
+    
     { label: 'CONNECT', href: '#connect' },
   ];
 

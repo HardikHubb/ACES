@@ -77,9 +77,10 @@ export function App() {
       <main className="relative z-10">
         <HeroSection />
         <AboutSection />
+        <RegistrationSection />
         <TeamSection />
         <EventsSection />
-        <RegistrationSection />
+        
         <SocialsSection />
       </main>
 

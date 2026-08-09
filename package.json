@@ -7,7 +7,9 @@
     "dev": "npx vite",
     "build": "npx tsc -b && npx vite build",
     "lint": "npx oxlint",
-    "preview": "npx vite preview"
+    "preview": "npx vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",
@@ -29,6 +31,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "gh-pages": "^6.3.0",
     "oxlint": "^1.75.0",
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
