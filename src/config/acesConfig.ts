@@ -52,7 +52,7 @@ export const ABOUT_ACES_TEXT = {
  Code • Connect  • Create
                 Thriving Through Connections.
                 
-                HOD - Mahendra Nivangune Sir`,
+                HOD/ACES Staff Coordinator - Mahendra Nivangune Sir`,
   highlightPhrases: [
     'Code',
     'Connect ',
