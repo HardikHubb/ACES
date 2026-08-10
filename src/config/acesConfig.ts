@@ -47,14 +47,19 @@ export const ACES_INFO = {
 };
 
 export const ABOUT_ACES_TEXT = {
-  paragraph: `ACES — Association of Computer Engineering Students is where curious minds, bold ideas, and technology come together. From building cool projects and exploring the latest tech to competing, collaborating, and learning beyond the classroom, ACES is all about turning “what if?” into “let’s build it.” We’re here to connect, create, experiment, and grow together — one idea, one line of code, and one challenge at a time.`,
+  paragraph: `Association of Computer Engineering Students (ACES) – SAOE is the official student organization of the Computer Engineering Department at Sinhgad Academy of Engineering, Pune.                     
+              By the Students, For the Students 
+ Code • Connect  • Create
+                Thriving Through Connections.
+                
+                HOD - Mahendra Nivangune Sir`,
   highlightPhrases: [
-    'curious minds',
-    'bold ideas',
-    'technology',
-    'let’s build it',
-    'connect',
-    'create',
+    'Code',
+    'Connect ',
+    'Create',
+    'ub',
+    'By the Students',
+    'For the Students',
     'experiment',
     'grow together',
   ],
