@@ -40,7 +40,7 @@ export const ACES_INFO = {
   tagline: 'CODE. CONNECT. CREATE.',
   alternateTagline: 'WHERE IDEAS MEET TECHNOLOGY.',
   heroTagline: 'CODE. CONNECT. CREATE.',
-  registrationDeadline: '17 • 08 • 2026',
+  registrationDeadline: '16 • 08 • 2026',
   registrationRawDate: '2026-08-15',
   copyrightYear: '2026',
   technicalTeamCredit: 'Built by the ACES Technical Team',
