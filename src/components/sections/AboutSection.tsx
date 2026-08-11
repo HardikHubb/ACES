@@ -2,7 +2,6 @@ import React from 'react';
 import { ABOUT_ACES_TEXT } from '../../config/acesConfig';
 import { SectionHeader } from '../ui/SectionHeader';
 import { GlassCard } from '../ui/GlassCard';
-import { Code, Lightbulb, Users, Cpu } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   const renderHighlightedParagraph = () => {
